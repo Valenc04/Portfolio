@@ -4,7 +4,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 export default function Home() {
   return (
     <>
-    <main className="flex flex-col w-full min-w-0 max-w-full px-4 sm:px-6 box-border bg-[#f5f1e6] py-16">
+    <main id="home" className="flex flex-col w-full min-w-0 max-w-full px-4 sm:px-6 box-border bg-[#f5f1e6] py-16">
       <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex flex-col gap-2 order-1 text-center sm:text-left">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-sans text-green-900">Valentín Cabanas</h1>
@@ -13,7 +13,7 @@ export default function Home() {
         <Image
           className="w-full max-w-[200px] sm:max-w-[260px] md:max-w-[300px] rounded-full h-auto shrink-0 order-2"
           src="/images/chico-crema5.png"
-          alt="portrait"
+          alt="Portrait"
           width={300}
           height={200}
         />
@@ -27,16 +27,26 @@ export default function Home() {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold font-sans text-green-900 tracking-wide">
           About me
         </h2>
-        <div className="space-y-4 text-base sm:text-lg text-green-800 font-sans">
-          <p>
-            I am Valentín Cabanas, an Engineering student at Universidad Tecnológica Nacional (UTN-FRBA).
-          </p>
-          <p>
-            Throughout my academic journey, I have worked on several projects that allowed me to develop strong technical and problem-solving skills.
-          </p>
-          <p>
-            I am currently seeking my first professional experience as a Software Developer, where I can continue growing, improving my abilities, and gaining hands-on experience in the field.
-          </p>
+        <div className="flex flex-col sm:flex-row items-center gap-4 w-full">
+          <div className="w-full max-w-[200px] sm:max-w-[200px] shrink-0 overflow-hidden rounded-sm aspect-[3/4] sm:aspect-square">
+            <Image 
+              className="w-full h-full object-cover"
+              src="/images/foto-personal.jpeg" alt="Personal Photo" 
+              width={300} height={400}
+              sizes="(max-width: 640px) 200px, 200px"
+            />
+          </div>
+          <div className="space-y-4 text-base sm:text-lg text-green-800 font-sans text-left w-full">
+            <p>
+              I am Valentín Cabanas, an Engineering student at Universidad Tecnológica Nacional (UTN-FRBA).
+            </p>
+            <p>
+              Throughout my academic journey, I have worked on several projects that allowed me to develop strong technical and problem-solving skills.
+            </p>
+            <p>
+              I am currently seeking my first professional experience as a Software Developer, where I can continue growing, improving my abilities, and gaining hands-on experience in the field.
+            </p>
+          </div>
         </div>
       </div>
     </section>
