@@ -31,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="overflow-x-hidden">
+    <html lang="en" className="overflow-x-hidden">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col overflow-x-hidden min-w-0`}>
         <Navbar />
         <div className="pt-16 flex-1 min-w-0 w-full max-w-full overflow-x-hidden">

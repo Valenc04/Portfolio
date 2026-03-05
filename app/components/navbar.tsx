@@ -7,17 +7,13 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full h-16 flex justify-between items-center px-4 sm:px-6 bg-[#f5f1e6] border border-black/10 text-black z-50 min-w-0">
-      
-      <div className="text-xl font-sans">
-        Valentín
-      </div>
 
       {/* Links Desktop */}
       <div className="hidden md:flex gap-6 font-sans">
         <Link href="#home">Home</Link>
-        <Link href="#sobre">Sobre mí</Link>
-        <Link href="#proyectos">Proyectos</Link>
-        <Link href="#contacto">Contacto</Link>
+        <Link href="#sobre">About me</Link>
+        <Link href="#proyectos">Projects</Link>
+        <Link href="#contacto">Contact</Link>
       </div>
 
       {/* Botón Hamburguesa */}
@@ -52,9 +48,9 @@ export default function Navbar() {
 
         <div className="flex flex-col items-center gap-8 mt-8 font-sans">
           <Link href="#home" onClick={() => setMenuOpen(false)}>Home</Link>
-          <Link href="#sobre" onClick={() => setMenuOpen(false)}>Sobre mí</Link>
-          <Link href="#proyectos" onClick={() => setMenuOpen(false)}>Proyectos</Link>
-          <Link href="#contacto" onClick={() => setMenuOpen(false)}>Contacto</Link>
+          <Link href="#sobre" onClick={() => setMenuOpen(false)}>About me</Link>
+          <Link href="#proyectos" onClick={() => setMenuOpen(false)}>Projects</Link>
+          <Link href="#contacto" onClick={() => setMenuOpen(false)}>Contact</Link>
         </div>
       </div>
     </nav>
