@@ -60,12 +60,12 @@ export default function Home() {
             You can contact me through the following channels:
           </p>
           <ul className="flex flex-col gap-4 w-full">
-            <li>
+            <li className="w-full flex justify-center">
               <a
                 href="https://github.com/Valenc04"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-4 justify-center sm:justify-start"
+                className="group flex items-center gap-4 w-full max-w-sm justify-start"
               >
                 <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[#0b1f17] text-[#f5f1e6] shadow-sm transition-transform duration-200 ease-out group-hover:-translate-y-1 group-hover:scale-105 group-hover:shadow-md">
                   <Github className="w-5 h-5" />
@@ -75,12 +75,12 @@ export default function Home() {
                 </span>
               </a>
             </li>
-            <li>
+            <li className="w-full flex justify-center">
               <a
                 href="https://www.linkedin.com/in/valentin-cabanas-455158389"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-4 justify-center sm:justify-start"
+                className="group flex items-center gap-4 w-full max-w-sm justify-start"
               >
                 <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[#0b1f17] text-[#f5f1e6] shadow-sm transition-transform duration-200 ease-out group-hover:-translate-y-1 group-hover:scale-105 group-hover:shadow-md">
                   <Linkedin className="w-5 h-5" />
@@ -90,10 +90,10 @@ export default function Home() {
                 </span>
               </a>
             </li>
-            <li>
+            <li className="w-full flex justify-center">
               <a
                 href="mailto:valentincabanas04@gmail.com"
-                className="group flex items-center gap-4 justify-center sm:justify-start"
+                className="group flex items-center gap-4 w-full max-w-sm justify-start"
               >
                 <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[#0b1f17] text-[#f5f1e6] shadow-sm transition-transform duration-200 ease-out group-hover:-translate-y-1 group-hover:scale-105 group-hover:shadow-md">
                   <Mail className="w-5 h-5" />
