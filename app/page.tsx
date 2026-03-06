@@ -54,7 +54,33 @@ export default function Home() {
       id="proyectos"
       className="w-full min-w-0 px-4 sm:px-6 py-16 bg-[#f5f1e6]"
     >
-
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold font-sans text-green-900 tracking-wide text-center mb-8">Projects</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-6xl mx-auto">
+        <a href="https://note-life.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex flex-col h-full gap-4 rounded-lg bg-white p-4 min-h-0 transition-all duration-200 ease-out hover:-translate-y-2 hover:shadow-lg hover:bg-green-50/70">
+          <header className="flex flex-row gap-4 flex-shrink-0 items-center">
+            <div className="w-7 h-7 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-gray-100">
+              <Image src="/images/favicon.jpg" alt="NoteLife Logo" width={28} height={28} className="w-full h-full object-cover" />
+            </div>
+            <div className="flex flex-col gap-2 min-w-0">
+              <h3 className="text-lg font-bold text-green-900 leading-7">NoteLife - Notes App</h3>
+            </div>
+          </header>
+          <p className="text-sm text-gray-500">
+                NoteLife is a simple web app that allows you to create, edit and delete personal notes. 
+                Also you can create filter and organize them by categories that are created by yourself.
+                The architecture is based on a React web app with a Node.js backend and SQLite database.
+          </p>
+          <div className="flex flex-row gap-2">
+            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Nest.js</span>
+            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Node.js</span>
+            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">SQLite</span>
+            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">React</span>
+            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Vite</span>
+            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Tailwind CSS</span>
+            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">TypeScript</span>
+          </div>
+        </a>
+      </div>
     </section>
     <section
       id="contacto"
