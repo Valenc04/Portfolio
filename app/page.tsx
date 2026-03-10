@@ -125,21 +125,6 @@ export default function Home() {
           <ul className="flex flex-col gap-4 w-full">
             <li className="w-full flex justify-center">
               <a
-                href="https://github.com/Valenc04"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-4 w-full max-w-sm justify-start"
-              >
-                <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[#0b1f17] text-[#f5f1e6] shadow-sm transition-transform duration-200 ease-out group-hover:-translate-y-1 group-hover:scale-105 group-hover:shadow-md">
-                  <Github className="w-5 h-5" />
-                </span>
-                <span className="font-medium group-hover:underline transition-colors duration-150">
-                  GitHub
-                </span>
-              </a>
-            </li>
-            <li className="w-full flex justify-center">
-              <a
                 href="https://www.linkedin.com/in/valentin-cabanas-455158389"
                 target="_blank"
                 rel="noopener noreferrer"
