@@ -80,6 +80,32 @@ export default function Home() {
             <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">TypeScript</span>
           </div>
         </a>
+        <a href="https://birbnb-2.netlify.app/app" target="_blank" rel="noopener noreferrer" className="flex flex-col h-full gap-4 rounded-lg bg-white p-4 min-h-0 transition-all duration-200 ease-out hover:-translate-y-2 hover:shadow-lg hover:bg-green-50/70">
+          <header className="flex flex-row gap-4 flex-shrink-0 items-center">
+            <div className="w-7 h-7 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-gray-100">
+              <Image src="/images/birbnb.jpg" alt="Birbnb Logo" width={28} height={28} className="w-full h-full object-cover" />
+            </div>
+            <div className="flex flex-col gap-2 min-w-0">
+              <h3 className="text-lg font-bold text-green-900 leading-7">Birbnb - Booking Platform</h3>
+            </div>
+          </header>
+          <p className="text-sm text-gray-500">
+            Birbnb is a web platform that allows users to search and book accommodations easily and quickly. 
+            Travelers can explore properties, view photos, prices, and availability. Hosts can view reservation requests, 
+            accept or deny them, and receive notifications about new bookings or updates. It connects people looking for a place 
+            to stay with those who have spaces to offer. 🏡✈️
+            The architecture is based on a React web app with a Node.js + express backend and MongoDB database.
+          </p>
+          <div className="flex flex-row gap-2">
+            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Nest.js</span>
+            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Node.js</span>
+            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">SQLite</span>
+            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">React</span>
+            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Vite</span>
+            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Tailwind CSS</span>
+            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">TypeScript</span>
+          </div>
+        </a>
       </div>
     </section>
     <section
