@@ -97,13 +97,14 @@ export default function Home() {
             The architecture is based on a React web app with a Node.js + express backend and MongoDB database.
           </p>
           <div className="flex flex-row gap-2">
-            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Nest.js</span>
+            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Swagger</span>
             <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Node.js</span>
-            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">SQLite</span>
+            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">MongoDB</span>
             <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">React</span>
-            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Vite</span>
-            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Tailwind CSS</span>
-            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">TypeScript</span>
+            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Express</span>
+            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Axios</span>
+            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">MUI</span>
+            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">JavaScript</span>
           </div>
         </a>
       </div>
