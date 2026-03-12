@@ -70,14 +70,14 @@ export default function Home() {
                 Also you can create filter and organize them by categories that are created by yourself.
                 The architecture is based on a React web app with a Node.js backend and SQLite database.
           </p>
-          <div className="flex flex-row gap-2">
-            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Nest.js</span>
-            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Node.js</span>
-            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">SQLite</span>
-            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">React</span>
-            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Vite</span>
-            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Tailwind CSS</span>
-            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">TypeScript</span>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Nest.js</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Node.js</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">SQLite</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">React</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Vite</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Tailwind CSS</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">TypeScript</span>
           </div>
         </a>
         <a href="https://birbnb-2.netlify.app/app" target="_blank" rel="noopener noreferrer" className="flex flex-col h-full gap-4 rounded-lg bg-white p-4 min-h-0 transition-all duration-200 ease-out hover:-translate-y-2 hover:shadow-lg hover:bg-green-50/70">
@@ -96,16 +96,29 @@ export default function Home() {
             to stay with those who have spaces to offer. 🏡✈️
             The architecture is based on a React web app with a Node.js + express backend and MongoDB database.
           </p>
-          <div className="flex flex-row gap-2">
-            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Swagger</span>
-            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Node.js</span>
-            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">MongoDB</span>
-            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">React</span>
-            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Express</span>
-            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">Axios</span>
-            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">MUI</span>
-            <span className="px-2 py-1 text-xs bg-green-900/20 text-green-900 rounded-md">JavaScript</span>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Swagger</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Node.js</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">MongoDB</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">React</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Express</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Axios</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">MUI</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">JavaScript</span>
           </div>
+        </a>
+        <a href="#projects" className="flex flex-col h-full gap-4 rounded-lg bg-white p-4 min-h-0 transition-all duration-200 ease-out hover:-translate-y-2 hover:shadow-lg hover:bg-green-50/70">
+          <header className="flex flex-row gap-4 flex-shrink-0 items-center">
+            <div className="w-7 h-7 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-gray-100">
+              <Image src="/images/mgrc.jpg" alt="MGRCApp Logo" width={28} height={28} className="w-full h-full object-cover" />
+            </div>
+            <div className="flex flex-col gap-2 min-w-0">
+              <h3 className="text-lg font-bold text-green-900 leading-7">MGRC - News Portal</h3>
+            </div>
+          </header>
+          <p className="text-sm text-gray-500">
+            Coming soon...
+          </p>
         </a>
       </div>
     </section>
