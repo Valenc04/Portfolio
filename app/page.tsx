@@ -70,6 +70,9 @@ export default function Home() {
                 Also you can create filter and organize them by categories that are created by yourself.
                 The architecture is based on a React web app with a Node.js backend and SQLite database.
           </p>
+          <p className="text-sm text-gray-500">
+            username/password: admin/admin123
+          </p>
           <div className="mt-2 flex flex-wrap gap-2">
             <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Nest.js</span>
             <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Node.js</span>
@@ -95,6 +98,9 @@ export default function Home() {
             accept or deny them, and receive notifications about new bookings or updates. It connects people looking for a place 
             to stay with those who have spaces to offer. 🏡✈️
             The architecture is based on a React web app with a Node.js + express backend and MongoDB database.
+          </p>
+          <p className="text-sm text-gray-500">
+            username/password: anfitrion.demo@birbnb.local/Demo1234
           </p>
           <div className="mt-2 flex flex-wrap gap-2">
             <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Swagger</span>
