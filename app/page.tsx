@@ -56,7 +56,7 @@ export default function Home() {
     >
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold font-sans text-green-900 tracking-wide text-center mb-8">Projects</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-6xl mx-auto">
-        <a href="https://note-life.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex flex-col h-full gap-4 rounded-lg bg-white p-4 min-h-0 transition-all duration-200 ease-out hover:-translate-y-2 hover:shadow-lg hover:bg-green-50/70">
+        <a href="/proyectos/notelife" className="flex flex-col h-full gap-4 rounded-lg bg-white p-4 min-h-0 transition-all duration-200 ease-out hover:-translate-y-2 hover:shadow-lg hover:bg-green-50/70">
           <header className="flex flex-row gap-4 flex-shrink-0 items-center">
             <div className="w-7 h-7 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-gray-100">
               <Image src="/images/favicon.jpg" alt="NoteLife Logo" width={28} height={28} className="w-full h-full object-cover" />
@@ -70,9 +70,6 @@ export default function Home() {
                 Also you can create filter and organize them by categories that are created by yourself.
                 The architecture is based on a React web app with a Node.js backend and SQLite database.
           </p>
-          <p className="text-sm text-gray-500">
-            username/password: admin/admin123
-          </p>
           <div className="mt-2 flex flex-wrap gap-2">
             <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Nest.js</span>
             <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Node.js</span>
@@ -83,7 +80,7 @@ export default function Home() {
             <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">TypeScript</span>
           </div>
         </a>
-        <a href="https://birbnb-2.netlify.app/app" target="_blank" rel="noopener noreferrer" className="flex flex-col h-full gap-4 rounded-lg bg-white p-4 min-h-0 transition-all duration-200 ease-out hover:-translate-y-2 hover:shadow-lg hover:bg-green-50/70">
+        <a href="/proyectos/birbnb" className="flex flex-col h-full gap-4 rounded-lg bg-white p-4 min-h-0 transition-all duration-200 ease-out hover:-translate-y-2 hover:shadow-lg hover:bg-green-50/70">
           <header className="flex flex-row gap-4 flex-shrink-0 items-center">
             <div className="w-7 h-7 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-gray-100">
               <Image src="/images/birbnb.jpg" alt="Birbnb Logo" width={28} height={28} className="w-full h-full object-cover" />
@@ -99,9 +96,6 @@ export default function Home() {
             to stay with those who have spaces to offer. 🏡✈️
             The architecture is based on a React web app with a Node.js + express backend and MongoDB database.
           </p>
-          <p className="text-sm text-gray-500">
-            username/password: anfitrion.demo@birbnb.local/Demo1234
-          </p>
           <div className="mt-2 flex flex-wrap gap-2">
             <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Swagger</span>
             <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Node.js</span>
@@ -113,7 +107,7 @@ export default function Home() {
             <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">JavaScript</span>
           </div>
         </a>
-        <a href="#projects" className="flex flex-col h-full gap-4 rounded-lg bg-white p-4 min-h-0 transition-all duration-200 ease-out hover:-translate-y-2 hover:shadow-lg hover:bg-green-50/70">
+        <a href="/proyectos/mgrc" className="flex flex-col h-full gap-4 rounded-lg bg-white p-4 min-h-0 transition-all duration-200 ease-out hover:-translate-y-2 hover:shadow-lg hover:bg-green-50/70">
           <header className="flex flex-row gap-4 flex-shrink-0 items-center">
             <div className="w-7 h-7 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-gray-100">
               <Image src="/images/mgrc.jpg" alt="MGRCApp Logo" width={28} height={28} className="w-full h-full object-cover" />
