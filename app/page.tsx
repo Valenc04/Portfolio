@@ -107,7 +107,7 @@ export default function Home() {
             <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">JavaScript</span>
           </div>
         </a>
-        <a href="/proyectos/mgrc" className="flex flex-col h-full gap-4 rounded-lg bg-white p-4 min-h-0 transition-all duration-200 ease-out hover:-translate-y-2 hover:shadow-lg hover:bg-green-50/70">
+        <a href="#proyectos" className="flex flex-col h-full gap-4 rounded-lg bg-white p-4 min-h-0 transition-all duration-200 ease-out hover:-translate-y-2 hover:shadow-lg hover:bg-green-50/70">
           <header className="flex flex-row gap-4 flex-shrink-0 items-center">
             <div className="w-7 h-7 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-gray-100">
               <Image src="/images/mgrc.jpg" alt="MGRCApp Logo" width={28} height={28} className="w-full h-full object-cover" />
