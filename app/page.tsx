@@ -107,7 +107,7 @@ export default function Home() {
             <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">JavaScript</span>
           </div>
         </a>
-        <a href="#proyectos" className="flex flex-col h-full gap-4 rounded-lg bg-white p-4 min-h-0 transition-all duration-200 ease-out hover:-translate-y-2 hover:shadow-lg hover:bg-green-50/70">
+        <a href="/proyectos/mgrcApp" className="flex flex-col h-full gap-4 rounded-lg bg-white p-4 min-h-0 transition-all duration-200 ease-out hover:-translate-y-2 hover:shadow-lg hover:bg-green-50/70">
           <header className="flex flex-row gap-4 flex-shrink-0 items-center">
             <div className="w-7 h-7 rounded-full overflow-hidden shrink-0 flex items-center justify-center bg-gray-100">
               <Image src="/images/mgrc.jpg" alt="MGRCApp Logo" width={28} height={28} className="w-full h-full object-cover" />
@@ -117,8 +117,24 @@ export default function Home() {
             </div>
           </header>
           <p className="text-sm text-gray-500">
-            Coming soon...
+            MGRC is a Progressive Web App (PWA) designed to manage a sports club. It allows members to view teams, 
+            fixtures, tournaments, and club news, while admins can manage players, squads, memberships, and daily club 
+            operations. The app was built with Next.js, using PostgreSQL with Prisma, a headless CMS for content 
+            management, and Firebase for push notifications.
           </p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Next.js</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">PostgreSQL</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Prisma</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Firebase</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">React</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Tailwind CSS + shadcn/ui</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Redux Toolkit + RKT Query</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Clerk</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Serwist</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Firebase</span>
+            <span className="px-2 py-1 text-[10px] sm:text-xs bg-green-900/20 text-green-900 rounded-md">Sanity</span>
+          </div>
         </a>
       </div>
     </section>
