@@ -4,18 +4,23 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import { Menu, X } from "lucide-react";
+import type { Locale } from "../i18n/config";
+import type { Dictionary } from "../i18n/dictionaries/en";
+import LanguageSwitcher from "./language-switcher";
 
-const navLinks = [
-  { id: "home", label: "Home" },
-  { id: "sobre", label: "About me" },
-  { id: "skills", label: "Skills" },
-  { id: "proyectos", label: "Projects" },
-  { id: "contacto", label: "Contact" },
-];
+const sections = [
+  { id: "home", key: "home" },
+  { id: "sobre", key: "about" },
+  { id: "experiencia", key: "experience" },
+  { id: "skills", key: "skills" },
+  { id: "proyectos", key: "projects" },
+  { id: "contacto", key: "contact" },
+] as const;
 
-export default function Navbar() {
+export default function Navbar({ lang, t }: { lang: Locale; t: Dictionary["nav"] }) {
   const pathname = usePathname();
-  const isHome = pathname === "/";
+  const isHome = pathname === `/${lang}`;
+  const navLinks = sections.map((s) => ({ id: s.id, label: t[s.key] }));
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState(isHome ? "home" : "proyectos");
   const [scrolled, setScrolled] = useState(false);
@@ -37,7 +42,7 @@ export default function Navbar() {
       },
       { rootMargin: "-45% 0px -50% 0px" }
     );
-    navLinks.forEach(({ id }) => {
+    sections.forEach(({ id }) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
@@ -58,7 +63,7 @@ export default function Navbar() {
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     setMenuOpen(false);
-    if (!isHome) return; // Link navega a "/#id"
+    if (!isHome) return; // Link navega a "/{lang}/#id"
     e.preventDefault();
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
     history.replaceState(null, "", `#${id}`);
@@ -77,7 +82,7 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto h-full px-4 sm:px-6 flex items-center justify-between">
         <Link
-          href="/#home"
+          href={`/${lang}/#home`}
           onClick={(e) => handleClick(e, "home")}
           className="font-extrabold text-lg tracking-tight text-green-900"
         >
@@ -85,11 +90,11 @@ export default function Navbar() {
         </Link>
 
         {/* Links desktop */}
-        <ul className="hidden md:flex items-center gap-1 text-sm font-medium isolate">
+        <ul className="hidden lg:flex items-center gap-1 text-sm font-medium isolate">
           {navLinks.map(({ id, label }) => (
             <li key={id}>
               <Link
-                href={`/#${id}`}
+                href={`/${lang}/#${id}`}
                 onClick={(e) => handleClick(e, id)}
                 aria-current={isHome && active === id ? "true" : undefined}
                 className={`relative block px-3 py-1.5 rounded-full transition-colors ${
@@ -109,16 +114,19 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Botón hamburguesa */}
-        <button
-          className="md:hidden p-2 -mr-2 text-green-900"
-          onClick={() => setMenuOpen(true)}
-          aria-label="Open menu"
-          aria-expanded={menuOpen}
-          aria-controls="mobile-menu"
-        >
-          <Menu className="w-6 h-6" />
-        </button>
+        <div className="flex items-center gap-2">
+          <LanguageSwitcher lang={lang} label={t.language} />
+          {/* Botón hamburguesa */}
+          <button
+            className="lg:hidden p-2 -mr-2 text-green-900"
+            onClick={() => setMenuOpen(true)}
+            aria-label={t.openMenu}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+          >
+            <Menu className="w-6 h-6" />
+          </button>
+        </div>
       </div>
     </motion.nav>
 
@@ -126,7 +134,7 @@ export default function Navbar() {
         {menuOpen && (
           <>
             <motion.div
-              className="fixed inset-0 z-[70] bg-black/50 backdrop-blur-sm md:hidden"
+              className="fixed inset-0 z-[70] bg-black/50 backdrop-blur-sm lg:hidden"
               onClick={() => setMenuOpen(false)}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -136,8 +144,8 @@ export default function Navbar() {
               id="mobile-menu"
               role="dialog"
               aria-modal="true"
-              aria-label="Navigation"
-              className="fixed top-0 right-0 z-[80] h-dvh w-72 bg-forest text-cream shadow-2xl rounded-l-2xl md:hidden"
+              aria-label={t.menu}
+              className="fixed top-0 right-0 z-[80] h-dvh w-72 bg-forest text-cream shadow-2xl rounded-l-2xl lg:hidden"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
@@ -147,7 +155,7 @@ export default function Navbar() {
                 <button
                   className="p-2 hover:opacity-70"
                   onClick={() => setMenuOpen(false)}
-                  aria-label="Close menu"
+                  aria-label={t.closeMenu}
                   autoFocus
                 >
                   <X className="w-6 h-6" />
@@ -165,7 +173,7 @@ export default function Navbar() {
                     variants={{ hidden: { opacity: 0, x: 24 }, show: { opacity: 1, x: 0 } }}
                   >
                     <Link
-                      href={`/#${id}`}
+                      href={`/${lang}/#${id}`}
                       onClick={(e) => handleClick(e, id)}
                       className={active === id && isHome ? "text-green-400 font-semibold" : "hover:text-green-300"}
                     >

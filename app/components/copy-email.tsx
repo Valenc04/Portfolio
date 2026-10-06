@@ -3,7 +3,13 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Check, Copy } from "lucide-react";
 
-export default function CopyEmail({ email }: { email: string }) {
+export default function CopyEmail({
+  email,
+  labels,
+}: {
+  email: string;
+  labels: { copyEmail: string; copied: string };
+}) {
   const [copied, setCopied] = useState(false);
 
   const copy = async () => {
@@ -20,7 +26,7 @@ export default function CopyEmail({ email }: { email: string }) {
     <button
       type="button"
       onClick={copy}
-      aria-label={copied ? "Email copied" : "Copy email"}
+      aria-label={copied ? labels.copied : labels.copyEmail}
       className="relative inline-flex items-center justify-center w-10 h-10 rounded-full text-green-900 transition hover:bg-green-900/10"
     >
       <AnimatePresence mode="wait" initial={false}>
@@ -34,7 +40,7 @@ export default function CopyEmail({ email }: { email: string }) {
           {copied ? <Check className="w-4 h-4 text-green-700" /> : <Copy className="w-4 h-4" />}
         </motion.span>
       </AnimatePresence>
-      <span role="status" className="sr-only">{copied ? "Copied" : ""}</span>
+      <span role="status" className="sr-only">{copied ? labels.copied : ""}</span>
     </button>
   );
 }

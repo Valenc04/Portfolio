@@ -7,7 +7,7 @@ const socials = [
     { href: `mailto:${links.email}`, label: "Email", Icon: Mail, external: false },
 ];
 
-export default function Footercpt() {
+export default function Footercpt({ rights }: { rights: string }) {
     return(
         <footer className="w-full min-w-0 flex flex-col items-center justify-center px-4 sm:px-6 py-8 bg-forest text-cream border-t border-forest-soft gap-4 box-border">
             <div className="flex flex-row gap-2 shrink-0">
@@ -24,7 +24,7 @@ export default function Footercpt() {
                 ))}
             </div>
             <p className="text-xs md:text-sm text-cream/70 text-center">
-                © {new Date().getFullYear()} Valentín Cabanas. All rights reserved.
+                © {new Date().getFullYear()} Valentín Cabanas. {rights}
             </p>
         </footer>
     )

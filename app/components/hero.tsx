@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { ArrowDown, ArrowRight, Github, Linkedin } from "lucide-react";
 import { links } from "../data/projects";
+import type { Dictionary } from "../i18n/dictionaries/en";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 const item = {
@@ -10,7 +11,7 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.7, ease } },
 };
 
-export default function Hero() {
+export default function Hero({ t }: { t: Dictionary["hero"] }) {
   return (
     <main
       id="home"
@@ -35,23 +36,22 @@ export default function Hero() {
               <span className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-75" />
               <span className="relative w-2 h-2 rounded-full bg-green-600" />
             </span>
-            Open to work
+            {t.badge}
           </motion.span>
 
           <motion.h1
             variants={item}
             className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-green-950"
           >
-            Hi, I&apos;m Valentín Cabanas
+            {t.greeting}
           </motion.h1>
 
           <motion.p variants={item} className="text-lg sm:text-xl font-semibold text-green-800">
-            Systems Engineering Student · Full-Stack Developer
+            {t.role}
           </motion.p>
 
           <motion.p variants={item} className="text-base sm:text-lg text-green-900/70 leading-relaxed">
-            I build web applications end to end with React, Next.js and Node.js, from the database to
-            the interface.
+            {t.description}
           </motion.p>
 
           <motion.div variants={item} className="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-2">
@@ -59,14 +59,14 @@ export default function Hero() {
               href="#proyectos"
               className="group inline-flex items-center gap-2 rounded-full bg-forest text-cream px-5 py-3 text-sm font-semibold shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg"
             >
-              View projects
+              {t.viewProjects}
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
               href="#contacto"
               className="inline-flex items-center gap-2 rounded-full border border-green-900/25 px-5 py-3 text-sm font-semibold text-green-900 transition hover:bg-green-900/5 hover:-translate-y-0.5"
             >
-              Contact me
+              {t.contactMe}
             </a>
             <div className="flex items-center gap-1 ml-1">
               <a href={links.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub"
@@ -96,7 +96,7 @@ export default function Hero() {
             <Image
               className="relative w-52 h-52 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white shadow-xl"
               src="/images/chico-crema5.png"
-              alt="Illustrated portrait of Valentín Cabanas"
+              alt={t.portraitAlt}
               width={320}
               height={320}
               priority
@@ -107,7 +107,7 @@ export default function Hero() {
 
       <motion.a
         href="#sobre"
-        aria-label="Scroll to About me"
+        aria-label={t.scrollDown}
         className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 text-green-900/60 hover:text-green-900"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 8, 0] }}
