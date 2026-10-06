@@ -82,6 +82,11 @@ export const projects: Project[] = [
     subtitle: "Booking Platform",
     date: "March 2025 - August 2025",
     logo: "/images/birbnb.jpg",
+    screenshot: "/images/projects/birbnb-search.png",
+    gallery: [
+      { src: "/images/projects/birbnb-search.png", alt: "Birbnb accommodation search with filters", width: 1896, height: 919 },
+      { src: "/images/projects/birbnb-listing.png", alt: "Birbnb listing detail with booking form", width: 1273, height: 907 },
+    ],
     summary:
       "Accommodation booking platform: travelers search and book properties, hosts manage reservation requests and get notified.",
     overview:

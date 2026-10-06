@@ -57,24 +57,32 @@ export default function Gallery({ images }: { images: Screenshot[] }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
+  const featured = images.length !== 2;
+  const offset = featured ? 1 : 0;
+  const row = images.slice(offset);
+
   return (
     <>
       <div className="flex flex-col gap-4">
-        <Thumb
-          img={images[0]}
-          onClick={() => setOpen(0)}
-          style={{ aspectRatio: `${images[0].width} / ${images[0].height}` }}
-          priority
-        />
+        {/* Con 3+ capturas la primera va destacada a todo el ancho; con 2 van juntas en una fila */}
+        {featured && (
+          <Thumb
+            img={images[0]}
+            onClick={() => setOpen(0)}
+            style={{ aspectRatio: `${images[0].width} / ${images[0].height}` }}
+            priority
+          />
+        )}
         {/* Fila justificada: cada imagen crece según su proporción, así todas quedan a la misma altura */}
-        {images.length > 1 && (
+        {row.length > 0 && (
           <div className="flex flex-col sm:flex-row gap-4">
-            {images.slice(1).map((img, i) => (
+            {row.map((img, i) => (
               <Thumb
                 key={img.src}
                 img={img}
-                onClick={() => setOpen(i + 1)}
+                onClick={() => setOpen(i + offset)}
                 style={{ flex: `${img.width / img.height} 1 0%`, aspectRatio: `${img.width} / ${img.height}` }}
+                priority={!featured && i === 0}
               />
             ))}
           </div>
